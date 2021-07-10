@@ -3,7 +3,7 @@ body{
     height: 100%;
     background: hsl(233, 47%, 7%);
     font-family: 'Inter';
-    font-size: 15px;
+    font-size: 2vh;
 }
 .main , .text , .text3 , .subtext1, .subtext2 , .subtext3{
     display: flex;
@@ -18,28 +18,35 @@ body{
 
 .text{
     flex-direction: column;
-    margin: 10%;
+    width: 50%;
+    height: 100%;
+    margin-left: 5%;
 }
 
 .text1{
     color: hsl(0, 0%, 100%);
     font-weight:700;
+    width: 85%;
 }
 
 .text2{
     color:  hsla(0, 0%, 100%, 0.75);
+    width: 89%;
 }
 
 .text3{
     color: hsla(0, 0%, 100%, 0.6);
     font-weight: 400;
+    width: 80%;
 }
 
 .image img{
         object-fit: contain;
         filter: grayscale(100%) brightness(60%) sepia(100%) hue-rotate(-500deg) saturate(500%) contrast(0.8);
+        max-height: 100%;
+        max-width: 100%;
 }
-h3{
+#stats{
     font-weight: 700;
     color: white;
 }
@@ -52,34 +59,32 @@ h3{
 #snippet{
     color:hsl(277, 64%, 61%);
 }
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
 
 
-}
 
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+/* Media Query for Tablets Ipads portrait mode */
+@media (max-width: 768px){
     .main{
         flex-direction: column-reverse;
         text-align: center;
-    }
-    .text3{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    img{
-        margin-top: 15%;
-        height: 100%;
+        flex-basis: auto;
+}
+    .text1{
         width: 100%;
-        object-fit: contain;
     }
+    .text2{
+        width: 100%;
+    }
+.text3{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
+img{
+    margin-top: 15%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+}
