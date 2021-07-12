@@ -72,17 +72,17 @@ h3{
     height: auto;
 }
 
+
 @media only screen and (max-width: 720px)  {
     .main{
         flex-direction: column-reverse;
+        width: 80vw;
     }
 
     .text{
         text-align: center;
         margin: 0%;
         justify-content: center;
-        width: auto;
-        height: 50vh;
     }
     .text1{
         font-size: 3vw;
@@ -102,5 +102,5 @@ h3{
     .sub1{
         font-size: 4vw;
     }
-
+   
 }
